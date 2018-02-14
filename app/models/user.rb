@@ -6,21 +6,20 @@ class User < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-
+  validates :password, presence: true, length: { minimum: 6 }
 
   before_save :encrypt_password
 
   require 'digest/sha1'
 
   def encrypt_password
-    if password.present?
-      self.encrypted_password = Digest::SHA1.hexdigest(password)
-    end
+      self.password_digest = Digest::SHA1.hexdigest(password)
   end
 
   def authenticate(password)
-    encrypted_password == Digest::SHA1.hexdigest(password)
+    return self.password_digest == Digest::SHA1.hexdigest(password)
+
   end
 
-  validates :password, presence: true, length: { minimum: 6 }
+
 end
