@@ -1,10 +1,25 @@
 class User < ApplicationRecord
+  attr_accessor :password, :password_confirmation, :encrypted_password
   before_save { self.email = email.downcase }
   validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
+  validates :password, presence: true, length: { minimum: 6 }
 
-  #validates :password, presence: true, length: { minimum: 6 }
+  before_save :encrypt_password
+
+  require 'digest/sha1'
+
+  def encrypt_password
+      self.password_digest = Digest::SHA1.hexdigest(password)
+  end
+
+  def authenticate(password)
+    return self.password_digest == Digest::SHA1.hexdigest(password)
+
+  end
+
+
 end
