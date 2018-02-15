@@ -6,31 +6,28 @@
 		<header class="navbar">
 		    <nav style="text-align:right">
 		      <% if logged_in? %> 
-		        <%= link_to "Users", '#' %> |
-		        <%= link_to "Preferences", current_user %>
+		        <%= link_to "Profile", current_user %> |
+		        <%= link_to "Preferences", '#' %> |
 
 		        <!-- Bundle logout and change password, as well as other user
 		             functionalities in a cog wheel of some sort -->
 
-		        <div class="dropdown">
-		        	<!-- <button class="arrow-down"></button> -->
-		        	<div class="settings">
-		        		<%= link_to "Settings", '#' %>
-				        <%= link_to "Log Out", logout_path, method: :delete %>        		
-		        	</div>
-		        </div>
+        		<%= link_to "Settings", '#' %> |
+		        <%= link_to "Log Out", logout_path, method: :delete %>        		
+
 
 		      <% else %>
-		        <%= link_to "Log In", login_path %>
-		        <%= link_to "Sign up", signup_path %>
+		        <%= link_to "Sign Up", signup_path %> |
+		        <%= link_to "Log In", login_path %> 
 		      <% end %>
 		    </nav>
 		</header>
 
 		<!-- Insert ARAD logo here -->
 		<div class="logospace">
-			<h1>ARAD</h1>
-			<h1>A Recipe A Day</h1>			
+			<%= link_to root_path do %>
+				<h1>ARAD<br>A Recipe A Day</h1>
+			<% end %>
 		</div>
 
 

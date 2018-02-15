@@ -1,10 +1,31 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        This is a placeholder for a home page
-      </h1>
-    </section>
-  </aside>
+<div style="font-family:Roboto">
+	<div class="main" style="text-align:center">
+		<header class="navbar">
+		    <nav style="text-align:right">
+		      <% if logged_in? %> 
+		        <%= link_to "Profile", current_user %> |
+		        <%= link_to "Preferences", '#' %> |
+
+		        <!-- Bundle logout and change password, as well as other user
+		             functionalities in a cog wheel of some sort -->
+
+	    		<%= link_to "Settings", '#' %> |
+		        <%= link_to "Log Out", logout_path, method: :delete %>        		
+
+
+		      <% else %>
+		     	<%= link_to "Sign Up", signup_path %> |
+		        <%= link_to "Log In", login_path %> 
+		      <% end %>
+		    </nav>
+		</header>
+
+		<!-- Insert ARAD logo here -->
+		<div class="logospace">
+			<%= link_to root_path do %>
+				<h1>ARAD<br>A Recipe A Day</h1>
+			<% end %>
+		</div>
+	</div>
 </div>

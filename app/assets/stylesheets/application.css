@@ -22,14 +22,20 @@ body {
 }
 
 
-
 .container {
 	background-color:orange;
 }
 
-/*.footer {
-	background-color:blue;
-}*/
+.header {
+	background-color:orange;
+}
+
+
+.footer {
+	background-color:orange;
+	text-align:right;
+	font-family:Roboto;
+}
 
 /*#home_container .main {
 	background-color:red;
@@ -60,4 +66,12 @@ body {
 #scrolling_container > .slides{
 	width:100%;
 	display:none;
+}
+
+.logospace a:link {
+	text-decoration: none;
+}
+
+.navbar a:link {
+	text-decoration: none;
 }
