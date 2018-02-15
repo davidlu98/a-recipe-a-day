@@ -1,19 +1,37 @@
 <% provide(:title, "Log in") %>
-<h1>Log in</h1>
 
-<div class="row">
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600|Roboto" rel="stylesheet">
+
+<div class="row" style="max-width:600px;font-family:Roboto;margin:10px;">
   <div class="col-md-6 col-md-offset-3">
+    <div class="information" >
+      <h1>Log in</h1>
+    </div>
+
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <br>
+      <%= f.email_field :email, class: 'form-control', placeholder: "Email Address", :style=>'width:40%', :style=>'margin:0 0 3px 0'%>
+      <br>
 
       <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <br>
+      <%= f.password_field :password, class: 'form-control', placeholder: "Password", :style=>'width:40%', :style=>'margin:0 0 3px 0'%>
+      <br>
+      <br>
 
-      <%= f.submit "Log in", class: "btn btn-primary" %>
+      <%= f.submit "Log in", class: "btn btn-primary", :style=>'cursor:pointer', :style=>'width:40%', :style=>'margin:0 0 3px 0'%>
+    
+      <%= button_to "Sign up", signup_path, :method=>'get'%>
+
+      <p>New user? Sign-up for free!</p>
+
+      <%= button_to "Back to Home Page", root_path, :style=>'cursor:pointer', :style=>'margin: 0 0 3px 0', :method=>'get'%>
+
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+
   </div>
 </div>
+
