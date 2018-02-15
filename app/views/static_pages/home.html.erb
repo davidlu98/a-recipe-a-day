@@ -1,9 +1,85 @@
-<div class="center jumbotron">
-  <h1>A Recipe A Day</h1>
+<div class="container" id="home_container">
+	<div class="main">
 
-  <h2>
-    Welcome to A Recipe A Day! Are you ready to start your first dish?
-  </h2>
+		<header class="navbar">
+		    <nav>
+		      <%= link_to "About Us", root_path %> |
+		      <% if logged_in? %> 
+		        <%= link_to "Users", '#' %> |
+		        <%= link_to "Preferences", current_user %>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+		        <!-- Bundle logout and change password, as well as other user
+		             functionalities in a cog wheel of some sort -->
+
+		        <div class="dropdown">
+		        	<button class="arrow-down"></button>
+		        	<div class="settings">
+		        		<%= link_to "Settings", '#' %>
+				        <%= link_to "Log Out", logout_path, method: :delete %>        		
+		        	</div>
+		        </div>
+
+		      <% else %>
+		        <%= link_to "Log In", login_path %>
+		      <% end %>
+		    </nav>
+		</header>
+
+		<!-- Insert ARAD logo here -->
+		<h1>ARAD</h1>
+		<h1>A Recipe A Day</h1>
+
+		<img class="center_image" src="images/image_of_apple.jpg" alt="ARAD logo">
+
+		<!-- Insert foot slideshow here -->
+		<div id="scrolling_container">
+			<img class="slides" src="images/image_of_apple.jpg" alt="image of apples">			
+			<img class="slides" src="images/image_of_apple.jpg" alt="image of apples">
+			<img class="slides" src="images/image_of_apple.jpg" alt="image of apples">
+		</div>
+
+		<div clas="center">
+			<div class="section">
+				<button class="light-grey-button" onclick="plusDivs(-1)">< Prev</button>
+				<button class="light-grey-button" onclick="plusDivs(1)">Next ></button>
+			</div>
+		</div>
+
+
+		<ul>
+			<li>Diversify your dishes!</li>
+			<li>Learn new cooking skills!</li>
+			<li>Show off your Food Journal!</li>
+		</ul>
+
+		<%= link_to "GET STARTED", signup_path, class: "btn btn-lg btn-primary" %>
+	</div>
 </div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+	showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+	var i;
+	var x = document.getElementsByClassName("slides");
+	if(n > x.length) {
+		slideIndex = 1;
+	}
+
+	if(n < 1) {
+		slideIndex = x.length;
+	}
+
+	for(i = 0; i < x.length; i++) {
+		x[i].style.dislpay = "none";
+	}
+
+	x[slideIndex-1].style.display = "block";
+}
+
+</script>
