@@ -2,8 +2,8 @@
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600|Roboto" rel="stylesheet">
 
-<div class="row" style="max-width:600px;font-family:Roboto;margin:10px;">
-  <div class="col-md-6 col-md-offset-3">
+<div class="row" style="max-width:600px;font-family:Roboto;margin:0 auto;">
+  <div class="col-md-6 col-md-offset-3" style="margin-left:150px">
     <div class="information" >
       <h1>Log in</h1>
     </div>
@@ -22,12 +22,11 @@
       <br>
 
       <%= f.submit "Log in", class: "btn btn-primary", :style=>'cursor:pointer', :style=>'width:40%', :style=>'margin:0 0 3px 0'%>
-    
-      <%= button_to "Sign up", signup_path, :method=>'get'%>
 
-      <p>New user? Sign-up for free!</p>
+      <br>
+      <br>
 
-      <%= button_to "Back to Home Page", root_path, :style=>'cursor:pointer', :style=>'margin: 0 0 3px 0', :method=>'get'%>
+      <%= link_to "Back to Home Page", root_path, :style=>'cursor:pointer', :style=>'margin: 0 0 3px 0'%>
 
     <% end %>
 
