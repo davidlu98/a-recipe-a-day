@@ -1,4 +1,27 @@
 <% provide(:title, "Edit user") %>
+
+<div style="font-family:Roboto">
+	<div class="main" style="text-align:left">
+		<header class="navbar">
+		    <nav style="text-align:right">
+		      <% if logged_in? %>
+		        <%= link_to "Profile", current_user %> |
+		        <%= link_to "Preferences", '#' %> |
+						<%= link_to "Other Blogs", users_path %> |
+
+		        <!-- Bundle logout and change password, as well as other user
+		             functionalities in a cog wheel of some sort -->
+
+	    		<%= link_to "Settings", edit_user_path(current_user) %> |
+		        <%= link_to "Log Out", logout_path, method: :delete %>
+
+		      <% else %>
+		     	<%= link_to "Sign Up", signup_path %> |
+		        <%= link_to "Log In", login_path %>
+		      <% end %>
+		    </nav>
+		</header>
+
 <h1>Update your profile</h1>
 
 <div class="row">
