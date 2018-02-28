@@ -32,7 +32,7 @@
 		</div>
 
 
-		<!-- Insert foot slideshow here -->
+		<!-- Insert food slideshow here -->
 <!-- 		<div id="scrolling_container">
 			<img class="slides" src="images/image_of_apple.jpg" alt="image of apples">
 			<img class="slides" src="images/image_of_apple.jpg" alt="image of apples">
@@ -46,12 +46,17 @@
 			</div>
 		</div> -->
 
+		<% if logged_in? %>
+			<%= link_to "UPLOAD", upload_path %>
 
-		<ul>
-			<li>Diversify your dishes!</li>
-			<li>Learn new cooking skills!</li>
-			<li>Show off your Food Journal!</li>
-		</ul>
+		<% else %>
+			<ul>
+				<li>Diversify your dishes!</li>
+				<li>Learn new cooking skills!</li>
+				<li>Show off your Food Journal!</li>
+			</ul>
+
+		<% end %>		
 
 <!-- 		<%= link_to "GET STARTED", signup_path, class: "btn btn-lg btn-primary" %> -->
 	</div>
