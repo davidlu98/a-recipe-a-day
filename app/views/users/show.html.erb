@@ -30,3 +30,15 @@
 
 	</div>
 </div>
+
+<div style="font-family:Roboto">
+<div class="col-md-8">
+	<% if @user.microposts.any? %>
+		<h2> <%= @user.name %>'s Recipes </h2>
+		<ol class="microposts">
+			<%= render @microposts %>
+		</ol>
+		<%= will_paginate @microposts %>
+	<% end %>
+</div>
+</div>

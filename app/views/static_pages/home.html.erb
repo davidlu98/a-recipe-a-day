@@ -49,6 +49,18 @@
 		<% if logged_in? %>
 			<%= link_to "UPLOAD", upload_path %>
 
+			<div class="row">
+		    <aside class="col-md-4">
+		      <section class="user_info">
+		        <%= render 'shared/user_info' %>
+		      </section>
+		      <section class="micropost_form">
+		        <%= render 'shared/micropost_form' %>
+		      </section>
+		    </aside>
+		  </div>
+
+
 		<% else %>
 			<ul>
 				<li>Diversify your dishes!</li>
@@ -56,7 +68,7 @@
 				<li>Show off your Food Journal!</li>
 			</ul>
 
-		<% end %>		
+		<% end %>
 
 <!-- 		<%= link_to "GET STARTED", signup_path, class: "btn btn-lg btn-primary" %> -->
 	</div>

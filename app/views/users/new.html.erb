@@ -1,6 +1,5 @@
 <% provide(:title, 'Sign up') %>
 
-<%= render 'shared/error_messages', :style=>'border:1px solid black'%>
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600|Roboto" rel="stylesheet">
 
@@ -14,6 +13,8 @@
 
 
     <%= form_for(@user, url: signup_path) do |f| %>
+
+    <%= render 'shared/error_messages', object: f.object, :style=>'border:1px solid black'%>
 
 
       <%= f.label :name%>

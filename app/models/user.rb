@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :microposts, dependent: :destroy
   #enum role: [:regular, :admin]
   #after_initialize :set_default_role, :if => :new_record?
 
@@ -36,4 +37,8 @@ class User < ApplicationRecord
     BCrypt::Password.create(string, cost: cost)
   end
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+  
 end
