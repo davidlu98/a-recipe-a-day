@@ -22,8 +22,15 @@
 		    </nav>
 		</header>
 
-<h1>Check Out These Other Blogs!</h1>
+<div class="main" style="text-align:center">
+		<div class="logospace">
+			<%= link_to root_path do %>
+				<h1>ARAD<br>A Recipe A Day</h1>
+			<% end %>
+		</div>
 
+<div class="main" style="text-align:left">
+<h1>Check Out These Other Blogs!</h1>
 
 <ul class="users">
   <% @users.each do |user| %>
