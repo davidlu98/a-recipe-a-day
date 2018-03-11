@@ -15,7 +15,11 @@
  */
 
 /*// For the frontpage and footers and headers*/
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "recipe_card";
+@import "recipe_details";
+@import "icon";
 
 body {
 	background-color:orange;

@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include UsersHelper
   include SessionsHelper
 
+  
   private
 
     # Confirms a logged-in user.

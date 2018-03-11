@@ -2,7 +2,7 @@ require 'faraday'
 require 'json'
 
 class Connection
-  BASE = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com'
+  BASE = 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/'
 
   def self.api
     Faraday.new(url: BASE) do |faraday|
