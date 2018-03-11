@@ -17,7 +17,7 @@ module Spoonacular
 
     def self.random(query = {}, clear_cache)
       cache = CACHE_DEFAULTS.merge({ force: clear_cache })
-      response = Request.where('recipes/random', cache, query.merge({ number: MAX_LIMIT }))
+      response = Request.where('recipes/random', cache, query.merge({ number: 1}))
       recipes = response.fetch('recipes', []).map { |recipe| Recipe.new(recipe) }
       [ recipes, response[:errors] ]
     end
