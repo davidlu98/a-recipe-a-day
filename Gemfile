@@ -41,6 +41,7 @@ gem 'sdoc', group: :doc
 gem 'fog', '1.42'
 gem 'faraday'
 gem 'unirest'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'pry'
