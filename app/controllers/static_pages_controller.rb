@@ -3,9 +3,9 @@ class StaticPagesController < ApplicationController
     if logged_in?
       @micropost  = current_user.microposts.build
       @feed_items = current_user.feed.paginate(page: params[:page])
-      @tag = query.fetch(:tags, 'all')
-      @refresh_params = refresh_params
-      @recipes, @errors = Spoonacular::Recipe.random(query, clear_cache)
+      #@tag = query.fetch(:tags, 'all')
+      #@refresh_params = refresh_params
+      #@recipes, @errors = Spoonacular::Recipe.random(query, clear_cache)
     end
   end
 
