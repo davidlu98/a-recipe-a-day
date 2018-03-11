@@ -1,10 +1,4 @@
 <div class="row">
-  <div class="col-xs-12">
-    <h1><%= @tag.capitalize %> recipes</h1>
-    <%= link_to "Refresh", root_path(@refresh_params), class: "btn btn-info pull-right" %>
-  </div>
-</div>
-<div class="row">
   <% if @errors %>
     <%= @errors[:message] %>
   <% else %>
@@ -15,7 +9,7 @@
             <div class="row">
               <div class="col-xs-12">
                 <%= link_to recipe_path(recipe.id) do %>
-                  <%= image_tag recipe.image unless recipe.image.blank?%>
+                  <%= image_tag recipe.image, class: 'img-responsive' %>
                 <% end %>
               </div>
             </div>
