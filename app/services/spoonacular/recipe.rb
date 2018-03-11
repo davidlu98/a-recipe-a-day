@@ -13,17 +13,15 @@ module Spoonacular
                   :vegetarian
 
     MAX_LIMIT = 12
-    CACHE_DEFAULTS = { expires_in: 7.days, force: false }
 
-    def self.random(query = {}, clear_cache)
-      cache = CACHE_DEFAULTS.merge({ force: clear_cache })
-      response = Request.where('recipes/random', cache, query.merge({ number: 1}))
+    def self.random(query = {})
+      response = Request.where('recipes/random', query.merge({ number: 1 }))
       recipes = response.fetch('recipes', []).map { |recipe| Recipe.new(recipe) }
       [ recipes, response[:errors] ]
     end
 
     def self.find(id)
-      response = Request.get("recipes/#{id}/information", CACHE_DEFAULTS)
+      response = Request.get("recipes/#{id}/information")
       Recipe.new(response)
     end
 
@@ -38,12 +36,10 @@ module Spoonacular
     end
 
     def parse_instructions(args = {})
-      instructions = args.fetch("analyzedInstructions", [])
-      if instructions.present?
+      instructions = args["analyzedInstructions"]
+      if instructions
         steps = instructions.first.fetch("steps", [])
         steps.map { |instruction| Instruction.new(instruction) }
-      else
-        []
       end
     end
   end
