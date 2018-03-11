@@ -49,6 +49,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'web-console', '>= 3.3.0'
+  gem 'spring'
   gem 'dotenv-rails'
 end
 
