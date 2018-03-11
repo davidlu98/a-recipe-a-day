@@ -15,7 +15,7 @@
             <div class="row">
               <div class="col-xs-12">
                 <%= link_to recipe_path(recipe.id) do %>
-                  <%= image_tag recipe.image, class: 'img-responsive' %>
+                  <%= image_tag recipe.image unless recipe.image.blank?%>
                 <% end %>
               </div>
             </div>
