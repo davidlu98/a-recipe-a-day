@@ -1,3 +1,5 @@
+require 'faraday'
+
 module Spoonacular
   class Recipe < Base
     attr_accessor :aggregate_likes,
