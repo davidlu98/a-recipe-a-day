@@ -15,7 +15,7 @@ module Spoonacular
     MAX_LIMIT = 12
 
     def self.random(query = {})
-      response = Request.where('recipes/random?number=1')
+      response = Request.where('recipes/random?limitLicense=false&number=1')
       recipes = response.fetch('recipes', []).map { |recipe| Recipe.new(recipe) }
       [ recipes, response[:errors] ]
       #response = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1",
