@@ -9,7 +9,7 @@ class Connection
       faraday.response :logger
       faraday.adapter Faraday.default_adapter
       faraday.headers['Content-Type'] = 'application/json'
-      faraday.headers['X-Mashape-Key'] = ENV['MASHAPE_KEY']
+      faraday.headers['X-Mashape-Key'] = '2WRz2xV7zrmshjcUGGbftXfu4EzOp19CEKvjsntyCDPZgTglCG'
     end
   end
 end

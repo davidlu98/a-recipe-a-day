@@ -18,6 +18,12 @@ module Spoonacular
       response = Request.where('recipes/random', query.merge({ number: 1 }))
       recipes = response.fetch('recipes', []).map { |recipe| Recipe.new(recipe) }
       [ recipes, response[:errors] ]
+      #response = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1",
+      #  headers:{
+      #    "X-Mashape-Key" => "q75onpxrsqmshO1TGlBIl08v02fcp1GGzGjjsndRsGw8xKLCc8",
+      #    "Accept" => "application/json"
+      #  }
+      #recipes = response.body
     end
 
     def self.find(id)
