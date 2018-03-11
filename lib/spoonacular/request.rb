@@ -1,12 +1,12 @@
 class Request
   class << self
-    def where(resource_path, cache, query = {}, options = {})
-      response, status = get_json(resource_path, cache, query)
+    def where(resource_path, query = {}, options = {})
+      response, status = get_json(resource_path, query)
       status == 200 ? response : errors(response)
     end
 
-    def get(id, cache)
-      response, status = get_json(id, cache)
+    def get(id)
+      response, status = get_json(id)
       status == 200 ? response : errors(response)
     end
 
@@ -15,12 +15,10 @@ class Request
       response.merge(error)
     end
 
-    def get_json(root_path, cache, query = {})
+    def get_json(root_path, query = {})
       query_string = query.map{|k,v| "#{k}=#{v}"}.join("&")
       path = query.empty?? root_path : "#{root_path}?#{query_string}"
-      response =  Rails.cache.fetch(path, expires_in: cache[:expires_in], force: cache[:force]) do
-        api.get(path)
-      end
+      response = api.get(path)
       [JSON.parse(response.body), response.status]
     end
 
