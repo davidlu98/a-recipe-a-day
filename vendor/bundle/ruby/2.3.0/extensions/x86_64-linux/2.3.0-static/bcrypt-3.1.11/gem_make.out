@@ -1,0 +1,19 @@
+current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+/home/donald/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20180311-19260-17t4ebq.rb extconf.rb
+creating Makefile
+
+current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling crypt_blowfish.c
+compiling wrapper.c
+compiling crypt_gensalt.c
+compiling bcrypt_ext.c
+compiling crypt.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20180311-19260-5ykbsn
