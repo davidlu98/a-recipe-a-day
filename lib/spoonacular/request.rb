@@ -1,4 +1,4 @@
-class Request < ApplicationController
+class Request 
   class << self
     def where(resource_path, query = {}, options = {})
       response, status = get_json(resource_path, query)
