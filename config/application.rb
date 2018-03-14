@@ -10,7 +10,7 @@ module SampleApp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
 
-    #config.autoload_paths += %W(#{config.root}/lib/spoonacular)
+    config.autoload_paths += %W(#{config.root}/lib/spoonacular)
     config.autoload_paths += %W(#{config.root}/app/services)
 
     # Settings in config/environments/* take precedence over those specified here.
