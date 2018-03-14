@@ -1,6 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.autoload_paths += %W(#{config.root}/lib/spoonacular)
+  config.autoload_paths += %W(#{config.root}/app/services)
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
