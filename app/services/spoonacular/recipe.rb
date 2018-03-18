@@ -14,22 +14,18 @@ module Spoonacular
                   :vegan,
                   :vegetarian
 
-    MAX_LIMIT = 12
+    MAX_LIMIT = 1
+    CACHE_DEFAULTS = { expires_in: 1.days, force: false }
 
-    def self.random(query = {})
-      response = Request.where('recipes/random?limitLicense=false&number=1')
+    def self.random(query = {}, clear_cache)
+      cache = CACHE_DEFAULTS.merge({ force: clear_cache })
+      response = Request.where('recipes/random', cache, query.merge({ number: MAX_LIMIT }))
       recipes = response.fetch('recipes', []).map { |recipe| Recipe.new(recipe) }
       [ recipes, response[:errors] ]
-      #response = Unirest.get "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/random?limitLicense=false&number=1",
-      #  headers:{
-      #    "X-Mashape-Key" => "q75onpxrsqmshO1TGlBIl08v02fcp1GGzGjjsndRsGw8xKLCc8",
-      #    "Accept" => "application/json"
-      #  }
-      #recipes = response.body
     end
 
     def self.find(id)
-      response = Request.get("recipes/#{id}/information")
+      response = Request.get("recipes/#{id}/information", CACHE_DEFAULTS)
       Recipe.new(response)
     end
 
@@ -44,10 +40,12 @@ module Spoonacular
     end
 
     def parse_instructions(args = {})
-      instructions = args["analyzedInstructions"]
-      if instructions
+      instructions = args.fetch("analyzedInstructions", [])
+      if instructions.present?
         steps = instructions.first.fetch("steps", [])
         steps.map { |instruction| Instruction.new(instruction) }
+      else
+        []
       end
     end
   end
