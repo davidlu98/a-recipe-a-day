@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
       @micropost  = current_user.microposts.build
       @feed_items = current_user.feed.paginate(page: params[:page])
       @tag = query.fetch(:tags, 'all')
-      @recipes, @errors = Spoonacular::Recipe.random(query)
+      @recipes, @errors = Spoonacular::Recipe.random(query, clear_cache)
     end
   end
 
@@ -27,6 +27,10 @@ class StaticPagesController < ApplicationController
   private
   def query
     params.fetch(:query, {})
+  end
+
+  def clear_cache
+    params[:clear_cache].present?
   end
 
 end

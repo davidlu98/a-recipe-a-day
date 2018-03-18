@@ -19,6 +19,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :microposts,          only: [:create, :destroy]
-  resources :recipes
+  resources :recipes, only: %w(show index)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
