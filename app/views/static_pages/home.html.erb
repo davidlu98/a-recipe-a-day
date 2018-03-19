@@ -1,4 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600|Roboto" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 
 <div class="container" id="home_container" style="font-family:Roboto">
 	<div class="main" style="text-align:center">
@@ -18,7 +21,6 @@
 
 
 		      <% else %>
-		        <%= link_to "Sign Up", signup_path %> |
 		        <%= link_to "Log In", login_path %>
 		      <% end %>
 		    </nav>
@@ -31,20 +33,7 @@
 			<% end %>
 		</div>
 
-
-		<!-- Insert food slideshow here -->
-<!-- 		<div id="scrolling_container">
-			<img class="slides" src="images/image_of_apple.jpg" alt="image of apples">
-			<img class="slides" src="images/image_of_apple.jpg" alt="image of apples">
-			<img class="slides" src="images/image_of_apple.jpg" alt="image of apples">
-		</div>
-
-		<div clas="center">
-			<div class="section">
-				<button class="light-grey-button" onclick="plusDivs(-1)">< Prev</button>
-				<button class="light-grey-button" onclick="plusDivs(1)">Next ></button>
-			</div>
-		</div> -->
+		<br>
 
 		<% if logged_in? %>
 
@@ -99,19 +88,42 @@
 		    <% end %>
 		  <% end %>
 		</div>
-
-			<%= link_to "UPLOAD", upload_path %>
-
+			<a href="./upload" class="btn btn-primary">UPLOAD</a>
 		<% else %>
+
+		<div class="container">
+		  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">		  
+		    <!-- Wrapper for slides -->
+		    <div class="carousel-inner" role="listbox">
+		      <div class="item active">
+		        <img src="/assets/dairy_free.png" alt="Chania" width="115" height="86.25">
+		      </div>
+		      <div class="item">
+		        <img src="/assets/gluten_free.png" alt="Chania" width="115" height="86.25">
+		      </div>
+		      <div class="item">
+		        <img src="/assets/vegan.png" alt="Flower" width="115" height="86.25">
+		      </div>
+		      <div class="item">
+		        <img src="/assets/vegetarian.png" alt="Flower" width="115" height="86.25">
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+
 			<ul>
+				<br>
+				<br>
 				<li>Diversify your dishes!</li>
 				<li>Learn new cooking skills!</li>
 				<li>Show off your Food Journal!</li>
+				<br>
+				<br>
+				<a href="./signup" class="btn btn-primary" style="width:30%; font-size:150%">GET STARTED</a>
 			</ul>
 
 		<% end %>
-
-<!-- 		<%= link_to "GET STARTED", signup_path, class: "btn btn-lg btn-primary" %> -->
 	</div>
 </div>
 

@@ -1,3 +1,14 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img 
+{
+	width: 20%;
+	margin: auto;
+}
+
+
+  
