@@ -1,5 +1,5 @@
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/json-2.1.0/ext/json
-/home/donald/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20180320-25014-1jspcs7.rb extconf.rb
+/home/donald/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20180320-10412-1if9m5j.rb extconf.rb
 creating Makefile
 
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/json-2.1.0/ext/json

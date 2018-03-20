@@ -1,5 +1,5 @@
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
-/home/donald/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20180320-25014-114co1r.rb extconf.rb
+/home/donald/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20180320-10412-yeylqn.rb extconf.rb
 creating Makefile
 
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
@@ -12,4 +12,4 @@ linking shared-object bindex/cruby.so
 
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bindex-0.5.0/ext/bindex
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 cruby.so ./.gem.20180320-25014-12b88s6/bindex
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20180320-10412-oilbar/bindex
