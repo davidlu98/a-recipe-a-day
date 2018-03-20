@@ -1,5 +1,5 @@
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/unf_ext-0.0.7.5/ext/unf_ext
-/home/donald/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20180320-25014-6g241d.rb extconf.rb
+/home/donald/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20180320-10412-1twmhkn.rb extconf.rb
 checking for main() in -lstdc++... yes
 creating Makefile
 
@@ -19,4 +19,4 @@ linking shared-object unf_ext.so
 
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/unf_ext-0.0.7.5/ext/unf_ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 unf_ext.so ./.gem.20180320-25014-faifr7
+/usr/bin/install -c -m 0755 unf_ext.so ./.gem.20180320-10412-1sq6j1j

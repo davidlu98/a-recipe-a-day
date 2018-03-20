@@ -236,7 +236,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/donald/.rbenv/versions/2.3.5/include/ruby-2.3.0/x86_64-linux -I/home/donald/.rbenv/versions/2.3.5/include/ruby-2.3.0/ruby/backward -I/home/donald/.rbenv/versions/2.3.5/include/ruby-2.3.0 -I.  -I/home/donald/.rbenv/versions/2.3.5/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -Wno-maybe-uninitialized  conftest.c  -L. -L/home/donald/.rbenv/versions/2.3.5/lib -Wl,-rpath,/home/donald/.rbenv/versions/2.3.5/lib -L. -L/home/donald/.rbenv/versions/2.3.5/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -lffi  -lffi -Wl,-rpath,/home/donald/.rbenv/versions/2.3.5/lib -L/home/donald/.rbenv/versions/2.3.5/lib -lruby-static -lffi  -lffi -lpthread -lgmp -ldl -lcrypt -lm   -lc"
-/tmp/cc6nTLcX.o: In function `t':
+/tmp/ccmFBUtx.o: In function `t':
 /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/ffi-1.9.23/ext/ffi_c/conftest.c:14: undefined reference to `rb_thread_blocking_region'
 collect2: error: ld returned 1 exit status
 checked program was:
