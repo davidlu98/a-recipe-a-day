@@ -1,5 +1,5 @@
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
-/home/donald/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20180311-19260-17t4ebq.rb extconf.rb
+/home/donald/.rbenv/versions/2.3.5/bin/ruby -r ./siteconf20180320-25014-1chto4u.rb extconf.rb
 creating Makefile
 
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
@@ -16,4 +16,4 @@ linking shared-object bcrypt_ext.so
 
 current directory: /home/donald/a-recipe-a-day/vendor/bundle/ruby/2.3.0/gems/bcrypt-3.1.11/ext/mri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20180311-19260-5ykbsn
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20180320-25014-1sdavtk
