@@ -7,7 +7,6 @@
 		    <nav style="text-align:right">
 		      <% if logged_in? %>
 		        <%= link_to "Profile", current_user %> |
-		        <%= link_to "Preferences", '#' %> |
 						<%= link_to "Other Blogs", users_path %> |
 
 		        <!-- Bundle logout and change password, as well as other user
@@ -45,7 +44,7 @@
 
   <div class="Recipe">
     <div class="row">
-      <div class="col-xs-6">
+      <div class="col-xs-6" style="float:none; margin: 0 auto;">
         <%= image_tag @recipe.image, class: 'Recipe-image img-responsive' %>
 
         <div class="Icon-container">

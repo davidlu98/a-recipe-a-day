@@ -6,7 +6,6 @@
 		    <nav style="text-align:right">
 		      <% if logged_in? %>
 		        <%= link_to "Profile", current_user %> |
-		        <%= link_to "Preferences", '#' %> |
 						<%= link_to "Other Blogs", users_path %> |
 
 		        <!-- Bundle logout and change password, as well as other user
@@ -21,11 +20,14 @@
 		      <% end %>
 		    </nav>
 		</header>
+<div style="text-align:center">
+<h1>Update your profile</h1>  
+<br>
+</div>
 
-<h1>Update your profile</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+<div class="row"  style="max-width:600px; margin: 0 auto;">
+  <div class="col-md-6 col-md-offset-3" style="margin-left:150px">
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
 
@@ -50,8 +52,9 @@
       <br>
 
       <br>
-      <%= f.submit "Save changes", class: "btn btn-primary", :style=>'cursor:pointer', :style=>'width:40%', :style=>'margin:0 0 3px 0'%>
-      <br>
+      <div style="text-align:center">
+       <%= f.submit "SAVE CHANGES", class: "btn btn-primary", :style=>'cursor:pointer', :style=>'width:40%', :style=>'margin:0 0 3px 0'%>       
+      </div>
 
 			<br>
 			<%= link_to "Back to Home Page", root_path, :style=>'cursor:pointer', :style=>'margin: 0 0 3px 0'%>
