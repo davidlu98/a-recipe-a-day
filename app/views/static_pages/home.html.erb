@@ -41,10 +41,10 @@
 		    <%= @errors[:message] %>
 		  <% else %>
 		    <% @recipes.each_slice(3) do |recipes| %>
-		    
-		    <h1>Welcome, [Donald please change this to (the current) user] !</h1>
+
+		    <h1>Welcome, <%= current_user.name %>!</h1>
 		    <h1>Today's recipe is...</h1>
-		    
+
 		      <div class="col-sm-3" style="float:none; margin: 0 auto;">
 		        <% recipes.each do |recipe| %>
 		          <div class="RecipeCard">
@@ -95,7 +95,7 @@
 		<% else %>
 
 		<div class="container">
-		  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">		  
+		  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
 		    <!-- Wrapper for slides -->
 		    <div class="carousel-inner" role="listbox">
 		      <div class="item active">
