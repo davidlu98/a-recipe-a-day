@@ -2,23 +2,15 @@
 
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600|Roboto" rel="stylesheet">
 
-<div class="container" id="home_container" style="font-family:Roboto">
-	<div class="main" style="text-align:center">
-
+<div style="font-family:Roboto">
+	<div class="main" style="text-align:left">
 		<header class="navbar">
 		    <nav style="text-align:right">
 		      <% if logged_in? %>
 		        <%= link_to "Profile", current_user %> |
-		        <%= link_to "Preferences", '#' %> |
-						<%= link_to "Other Blogs", users_path %> |
-
-		        <!-- Bundle logout and change password, as well as other user
-		             functionalities in a cog wheel of some sort -->
-
+				<%= link_to "Other Blogs", users_path %> |
         		<%= link_to "Settings", edit_user_path(current_user) %> |
 		        <%= link_to "Log Out", logout_path, method: :delete %>
-
-
 		      <% else %>
 		        <%= link_to "Sign Up", signup_path %> |
 		        <%= link_to "Log In", login_path %>
@@ -26,15 +18,23 @@
 		    </nav>
 		</header>
 
-    <% if logged_in? %>
-    <div class="main" style="text-align:left">
-      <h1>Upload</h1>
-			<div class="row">
-		    <aside class="col-md-4">
-		      <section class="micropost_form">
-		        <%= render 'shared/micropost_form' %>
-		      </section>
-		    </aside>
-		  </div>
+	    <% if logged_in? %>
+		    <div class="information" >
+		      <h1 style="text-align:center">Upload</h1>
+		      <br>
+		    </div>
 
-<% end %>
+			<div class="row">
+			    <aside >
+			      <section class="micropost_form">
+			        <%= render 'shared/micropost_form' %>
+			      </section>
+			    </aside>
+
+		</div>
+		<% end %>
+	</div>	
+</div>
+
+
+
