@@ -42,7 +42,11 @@
 		    <%= @errors[:message] %>
 		  <% else %>
 		    <% @recipes.each_slice(3) do |recipes| %>
-		      <div class="col-sm-3">
+		    
+		    <h1>Welcome, [Donald please change this to (the current) user] !</h1>
+		    <h1>Today's recipe is...</h1>
+		    
+		      <div class="col-sm-3" style="float:none; margin: 0 auto;">
 		        <% recipes.each do |recipe| %>
 		          <div class="RecipeCard">
 		            <div class="row">
@@ -126,31 +130,3 @@
 		<% end %>
 	</div>
 </div>
-
-<!-- <script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-	showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-	var i;
-	var x = document.getElementsByClassName("slides");
-	if(n > x.length) {
-		slideIndex = 1;
-	}
-
-	if(n < 1) {
-		slideIndex = x.length;
-	}
-
-	for(i = 0; i < x.length; i++) {
-		x[i].style.dislpay = "none";
-	}
-
-	x[slideIndex-1].style.display = "block";
-}
-
-</script> -->
