@@ -23,14 +23,11 @@
 		    </nav>
 		</header>
 
-
-    		<!-- Insert ARAD logo here -->
-    		<div class="logospace">
-    			<%= link_to root_path do %>
-    				<h1>ARAD<br>A Recipe A Day</h1>
-    			<% end %>
-    		</div>
-
+  		<div class="logospace">
+  			<%= link_to root_path do %>
+  				<img src="/assets/logo.png" alt="ARAD Logo">
+  			<% end %>
+  		</div>
 
 <% if @recipe.errors %>
   <%= @recipe.errors[:message] %>
