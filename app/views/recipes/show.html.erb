@@ -6,7 +6,7 @@
 		<header class="navbar">
 		    <nav style="text-align:right">
 		      <% if logged_in? %>
-		        <%= link_to "Profile", current_user %> |
+		        <%= link_to "Food Journal", current_user %> |
 						<%= link_to "Other Blogs", users_path %> |
         		<%= link_to "Settings", edit_user_path(current_user) %> |
 		        <%= link_to "Log Out", logout_path, method: :delete %>
@@ -58,7 +58,7 @@
     </div>
 
     <div class="row Recipe-details">
-      <div class="col-xs-5">
+      <div class="col-xs-5" style="border-right:1px solid black">
         <h3>Ingredients</h3>
         <% @recipe.ingredients.each do |ingredient| %>
           <div class="Recipe-ingredient">

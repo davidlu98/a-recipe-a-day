@@ -4,8 +4,8 @@
 		<header class="navbar">
 		    <nav style="text-align:right">
 		      <% if logged_in? %>
-		        <%= link_to "Profile", current_user %> |
-				<%= link_to "Other Blogs", users_path %> |
+		        <%= link_to "Food Journal", current_user %> |
+				<%= link_to "Other Journals", users_path %> |
 	    		<%= link_to "Settings", edit_user_path(current_user) %> |
 		        <%= link_to "Log Out", logout_path, method: :delete %>
 		      <% else %>
@@ -14,7 +14,6 @@
 		      <% end %>
 		    </nav>
 		</header>
-
 		<div class="logospace">
 			<%= link_to root_path do %>
 				<%= image_tag("logo.png") %>
