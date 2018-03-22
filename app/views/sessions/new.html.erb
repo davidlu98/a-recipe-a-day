@@ -12,30 +12,20 @@
     </div>
 
     <%= form_for(:session, url: login_path) do |f| %>
-
       <%= f.label :email %>
       <br>
       <%= f.email_field :email, class: 'form-control', placeholder: "Email Address", :style=>'width:40%', :style=>'margin:0 0 3px 0'%>
       <br>
-
       <%= f.label :password %>
       <br>
       <%= f.password_field :password, class: 'form-control', placeholder: "Password", :style=>'width:40%', :style=>'margin:0 0 3px 0'%>
       <br>
       <br>
-
       <div style="text-align:center">
       <%= f.submit "LOG IN", class: "btn btn-primary", :style=>'cursor:pointer', :style=>'width:40%', :style=>'margin:0 0 3px 0'%>        
       </div>
-
-
       <br>
-
       <%= link_to "Back to Home Page", root_path, :style=>'cursor:pointer', :style=>'margin: 0 0 3px 0'%>
-
     <% end %>
-
-
   </div>
 </div>
-
