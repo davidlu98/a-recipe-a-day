@@ -53,26 +53,34 @@
 		                <div class="Icon-container" style="width:100%">
 		                  <div>
 		                    <% if recipe.gluten_free %>
-		                      <i class="Icon Icon--small Icon-glutenFree"></i>
+		                      <!-- <i class="Icon Icon--small Icon-glutenFree"></i> -->
+		                      <%= image_tag("gluten_free.png") %>
 		                    <% end %>
 
 		                    <% if recipe.dairy_free %>
-		                      <i class="Icon Icon--small Icon-dairyFree"></i>
+		                      <!-- <i class="Icon Icon--small Icon-dairyFree"></i> -->
+		                      <%= image_tag("dairy_free.png") %>
 		                    <% end %>
 
 		                    <% if recipe.vegetarian %>
-		                      <i class="Icon Icon--small Icon-vegetarian"></i>
+		                      <!-- <i class="Icon Icon--small Icon-vegetarian"></i> -->
+		                      <%= image_tag("vegetarian.png") %>
 		                    <% end %>
 
 		                    <% if recipe.vegan %>
-		                      <i class="Icon Icon--small Icon-vegan"></i>
+		                      <!-- <i class="Icon Icon--small Icon-vegan"></i> -->
+		                      <%= image_tag("vegan.png") %>
 		                    <% end %>
 		                  </div>
 		                  <div>
-		                    <i class="Icon Icon--small Icon-like"></i> <span><%= recipe.aggregate_likes %></span>
+		                    <!-- <i class="Icon Icon--small Icon-like"></i>  -->
+		                    <%= image_tag("like.png") %>
+		                    <span><%= recipe.aggregate_likes %></span>
 		                  </div>
 		                  <div>
-		                    <i class="Icon Icon--small Icon-clock"></i> <%= recipe.ready_in_minutes %> min
+		                    <!-- <i class="Icon Icon--small Icon-clock"></i>  -->
+		                    <%= image_tag("clock.png") %>
+		                    <%= recipe.ready_in_minutes %> min
 		                  </div>
 		                </div>
 		              </div>

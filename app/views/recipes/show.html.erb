@@ -58,7 +58,7 @@
     </div>
 
     <div class="row Recipe-details">
-      <div class="col-xs-5" style="border-right:2px solid black">
+      <div class="col-xs-5">
         <h3>Ingredients</h3>
         <% @recipe.ingredients.each do |ingredient| %>
           <div class="Recipe-ingredient">
@@ -67,7 +67,7 @@
         <% end %>
       </div>
 
-      <div class="col-xs-6">
+      <div class="col-xs-6" style="border-left:2px solid black;">
         <h3>Instructions</h3>
         <% @recipe.instructions.each do |instruction| %>
           <div class="Recipe-instruction">
