@@ -5,15 +5,9 @@
 		    <nav style="text-align:right">
 		      <% if logged_in? %>
 		        <%= link_to "Profile", current_user %> |
-	
 				<%= link_to "Other Blogs", users_path %> |
-
-		        <!-- Bundle logout and change password, as well as other user
-		             functionalities in a cog wheel of some sort -->
-
 	    		<%= link_to "Settings", edit_user_path(current_user) %> |
 		        <%= link_to "Log Out", logout_path, method: :delete %>
-
 		      <% else %>
 		     	<%= link_to "Sign Up", signup_path %> |
 		        <%= link_to "Log In", login_path %>
@@ -23,10 +17,9 @@
 
 		<div class="logospace">
 			<%= link_to root_path do %>
-				<img src="/assets/logo.png" alt="ARAD Logo">
+				<img src="/assets/logo.png" alt="ARAD Logo here">
 			<% end %>
 		</div>
-
 	</div>
 </div>
 
