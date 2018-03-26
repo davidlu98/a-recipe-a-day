@@ -2,7 +2,6 @@
 
 <div class="container" id="home_container" style="font-family:Roboto">
 	<div class="main" style="text-align:center">
-
 		<header class="navbar">
 		    <nav style="text-align:right">
 		      <% if logged_in? %>
@@ -18,7 +17,7 @@
 		</header>
   		<div class="logospace">
   			<%= link_to root_path do %>
-  				<%= image_tag("logo.png") %>
+  				<%= image_tag("logo3.png") %>
   			<% end %>
   		</div>
 
@@ -33,26 +32,27 @@
   <div class="Recipe">
     <div class="row">
       <div class="col-xs-6" style="float:none; margin: 0 auto;">
-        <%= image_tag @recipe.image, class: 'Recipe-image img-responsive' %>
+        <%= image_tag @recipe.image, class: 'Recipe-image img-responsive', :style=>'border: 10px double #a6a6a6'%>
 
         <div class="Icon-container">
           <% if @recipe.gluten_free %>
-            <i class="Icon Icon--default Icon-glutenFree"></i>
+            <%= image_tag("gluten_free.png") %>
           <% end %>
 
           <% if @recipe.dairy_free %>
-            <i class="Icon Icon--default Icon-dairyFree"></i>
+            <%= image_tag("dairy_free.png") %>
           <% end %>
 
           <% if @recipe.vegetarian %>
-            <i class="Icon Icon--default Icon-vegetarian"></i>
+            <%= image_tag("vegetarian.png") %>
           <% end %>
 
           <% if @recipe.vegan %>
-            <i class="Icon Icon--default Icon-vegan"></i>
+            <%= image_tag("vegan.png") %>
           <% end %>
 
-          <i class="Icon Icon--default Icon-clock"></i> <%= @recipe.ready_in_minutes %> min
+          <%= image_tag("clock.png") %>
+          <%= @recipe.ready_in_minutes %> min
         </div>
       </div>
     </div>

@@ -6,9 +6,11 @@
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img 
 {
-	width: 20%;
+	width: 60%;
 	margin: auto;
+	border: 5px dotted #a6a6a6;
 }
 
-
-  
+p {
+	font-size:150%
+}
