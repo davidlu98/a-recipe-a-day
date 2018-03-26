@@ -20,7 +20,7 @@
 	<div class="main" style="text-align:center">
 		<div class="logospace">
 			<%= link_to root_path do %>
-				<%= image_tag("logo2.png") %>
+				<%= image_tag("logo3.png") %>
 			<% end %>
 		</div>
 
@@ -36,14 +36,15 @@
 
 		    <h1>Welcome, <%= current_user.name %>!</h1>
 		    <h1>Today's recipe is...</h1>
+		    <br>
 
-		      <div class="col-sm-3" style="float:none; margin: 0 auto;">
+		      <div class="col-sm-3" style="float:none; margin: 0 auto; border:3px solid black">
 		        <% recipes.each do |recipe| %>
 		          <div class="RecipeCard">
 		            <div class="row">
 		              <div class="col-xs-14">
 		                <%= link_to recipe_path(recipe.id) do %>
-		                  <%= image_tag recipe.image, class: 'img-responsive' %>
+		                  <%= image_tag recipe.image, class: 'img-responsive'%>
 		                <% end %>
 		              </div>
 		            </div>
@@ -53,35 +54,26 @@
 		                <div class="Icon-container" style="width:100%">
 		                  <div>
 		                    <% if recipe.gluten_free %>
-		                      <!-- <i class="Icon Icon--small Icon-glutenFree"></i> -->
 		                      <%= image_tag("gluten_free.png") %>
 		                    <% end %>
 
 		                    <% if recipe.dairy_free %>
-		                      <!-- <i class="Icon Icon--small Icon-dairyFree"></i> -->
 		                      <%= image_tag("dairy_free.png") %>
 		                    <% end %>
 
 		                    <% if recipe.vegetarian %>
-		                      <!-- <i class="Icon Icon--small Icon-vegetarian"></i> -->
 		                      <%= image_tag("vegetarian.png") %>
 		                    <% end %>
 
 		                    <% if recipe.vegan %>
-		                      <!-- <i class="Icon Icon--small Icon-vegan"></i> -->
 		                      <%= image_tag("vegan.png") %>
 		                    <% end %>
 		                  </div>
 		                  <div>
-		                    <!-- <i class="Icon Icon--small Icon-like"></i>  -->
-		                    <%= image_tag("like.png") %>
-		                    <span><%= recipe.aggregate_likes %></span>
-		                  </div>
-		                  <div>
-		                    <!-- <i class="Icon Icon--small Icon-clock"></i>  -->
 		                    <%= image_tag("clock.png") %>
 		                    <%= recipe.ready_in_minutes %> min
 		                  </div>
+		                  <br>
 		                </div>
 		              </div>
 		            </div>
@@ -91,40 +83,50 @@
 		    <% end %>
 		  <% end %>
 		</div>
+			<br>
 			<a href="./upload" class="btn btn-primary">UPLOAD TO FOOD JOURNAL</a>
 		<% else %>
 
 		<div class="container" style="max-width:102%">
-		  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-		    <!-- Wrapper for slides -->
+		  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
 		    <div class="carousel-inner" role="listbox">
 		      <div class="item active">
-		        <%= image_tag("dairy_free.png") %>
+		        <%= image_tag("food1.jpg") %>
 		      </div>
 		      <div class="item">
-		        <%= image_tag("gluten_free.png") %>
+		        <%= image_tag("food2.jpg") %>
 		      </div>
 		      <div class="item">
-		        <%= image_tag("vegan.png") %>
+		        <%= image_tag("food3.jpg") %>
 		      </div>
 		      <div class="item">
-		        <%= image_tag("vegetarian.png") %>
+		        <%= image_tag("food4.jpg") %>
+		      </div>
+		      <div class="item">
+		        <%= image_tag("food5.jpg") %>
+		      </div>
+		      <div class="item">
+		        <%= image_tag("food6.jpg") %>
+		      </div>
+		      <div class="item">
+		        <%= image_tag("food7.jpg") %>
+		      </div>
+		      <div class="item">
+		        <%= image_tag("food8.jpg") %>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 
-			<ul>
-				<br>
-				<br>
-				<li>Diversify your dishes!</li>
-				<li>Learn new cooking skills!</li>
-				<li>Show off your Food Journal!</li>
-				<br>
-				<br>
-				<a href="./signup" class="btn btn-primary" style="width:30%; font-size:150%">GET STARTED</a>
-			</ul>
-
+			<br>
+			<br>
+			<br>
+			<p>Diversify your dishes!</p>
+			<p>Learn new cooking skills!</p>
+			<p>Show off your Food Journal!</p>
+			<br>
+			<br>
+			<a href="./signup" class="btn btn-primary" style="width:30%; font-size:150%">GET STARTED</a>
 		<% end %>
 	</div>
 </div>
