@@ -11,8 +11,9 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] = "Post created!"
-      redirect_to root_url
+      redirect_to current_user
     else
+      flash[:danger] = "Post too long! Max title length[] and max description[]"
       @feed_items = []
       redirect_to root_url
     end

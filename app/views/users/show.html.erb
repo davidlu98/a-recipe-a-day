@@ -16,7 +16,7 @@
 		</header>
 		<div class="logospace">
 			<%= link_to root_path do %>
-				<%= image_tag("logo3.png") %>
+				<%= image_tag("logo4.png") %>
 			<% end %>
 		</div>
 	</div>
@@ -25,9 +25,9 @@
 <div style="font-family:Roboto">
 <div>
 	<% if @user.microposts.any? %>
-		<h1 style="text-align:center"> <%= @user.name %>'s Food Journal </h1>
-		
-			<%= render @microposts %>
+		<h1 style="text-align:center; text-decoration: underline"> <%= @user.name %>'s Food Journal </h1>
+		<br>
+		<%= render @microposts %>
 		
 		<%= will_paginate @microposts %>
 	<% end %>
