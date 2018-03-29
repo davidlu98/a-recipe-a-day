@@ -13,7 +13,7 @@ class MicropostsController < ApplicationController
       flash[:success] = "Post created!"
       redirect_to current_user
     else
-      flash[:danger] = "Post too long! Max title length[] and max description[]"
+      flash[:danger] = "Post too long! Max description length of 110 characters."
       @feed_items = []
       redirect_to root_url
     end
@@ -21,7 +21,7 @@ class MicropostsController < ApplicationController
 
   def destroy
     @micropost.destroy
-    flash[:success] = "Post deleted"
+    flash[:success] = "Post deleted!"
     redirect_to request.referrer || root_url
   end
 
