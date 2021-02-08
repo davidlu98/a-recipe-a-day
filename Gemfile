@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '~> 3.1.6'
 gem 'faker', '1.7.3'
-gem 'carrierwave', '1.2.2'
+gem 'carrierwave', '1.3.2'
 gem 'mini_magick', '4.7.0'
 gem 'rails-controller-testing'
 # Use Capistrano for deployment
